@@ -45,15 +45,6 @@ export default defineConfig(({ command }) => {
       }),
     ],
   };
-  
-export default {
-  build: {
-    rollupOptions: {
-      external: ['izitoast']
-    }
-  }
-  };
-  
 });
 
 
