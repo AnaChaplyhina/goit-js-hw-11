@@ -106,7 +106,6 @@ header {
 #search-form input {
   width: 272px;
   height: 40px;
-  /*padding: 8px;*/
   border-radius: 8px;
   border: 1px solid #ccc;
   outline: none;
@@ -115,6 +114,8 @@ header {
     line-height: 1.5;
     letter-spacing: 0.04em;
     color: #808080;
+  padding-right: 16px;
+  padding-left: 16px;
    
 }
 
@@ -131,6 +132,7 @@ header {
   line-height: 1.5;
   letter-spacing: 0.04em;
   color: #fff;
+  padding: 0 16px;
 }
 
 #search-form button:hover {
