@@ -17,7 +17,7 @@
     /* Відступ всередині елементу */
     box-sizing: border-box;
   }
-}
+
 
 .gallery-item img {
   width: 100%;
