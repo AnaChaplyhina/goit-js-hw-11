@@ -110,6 +110,12 @@ header {
   border-radius: 8px;
   border: 1px solid #ccc;
   outline: none;
+  font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    color: #808080;
+   
 }
 
 #search-form button {
@@ -120,8 +126,18 @@ header {
   color: white;
   cursor: pointer;
   font-size: 16px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #fff;
 }
 
 #search-form button:hover {
   background-color: #3a5dbf;
+}
+
+#search-form input,
+#search-form button {
+  font-family: "Montserrat", sans-serif;
 }
