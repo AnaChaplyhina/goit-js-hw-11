@@ -1,9 +1,10 @@
-import SimpleLightbox from 'simplelightbox';
+import SimpleLightbox from 'simplelightbox'; 
 import 'simplelightbox/dist/simple-lightbox.min.css';
 
 export function renderGallery(images) {
   const galleryContainer = document.querySelector('.gallery');
-  galleryContainer.innerHTML = images
+
+  const markup = images
     .map(
       (image) => `
       <a href="${image.largeImageURL}" class="gallery-item">
@@ -17,6 +18,10 @@ export function renderGallery(images) {
       </a>`
     )
     .join('');
+
+
+  galleryContainer.innerHTML = markup;
+
 
   const lightbox = new SimpleLightbox('.gallery a');
   lightbox.refresh();
