@@ -11,6 +11,12 @@
   width: 300px;
   margin-bottom: 16px;
   text-align: center;
+  border: 1px solid #808080;
+    /* Додаємо сірий обвід до кожної картинки */
+    padding: 8px;
+    /* Відступ всередині елементу */
+    box-sizing: border-box;
+  }
 }
 
 .gallery-item img {
@@ -91,9 +97,6 @@
 header {
   display: flex;
   justify-content: center;
-  /* Центрування форми */
-  margin-top: 20px;
-  /* Відступ зверху */
   margin-top: 32px;
 }
 
@@ -107,8 +110,7 @@ header {
   width: 272px;
   height: 40px;
   padding: 8px;
-  border-radius: 4px 0 0 4px;
-  /* Закруглені краї зліва */
+  border-radius: 8px;
   border: 1px solid #ccc;
   outline: none;
 }
@@ -117,8 +119,7 @@ header {
   height: 40px;
   padding: 0 16px;
   border: none;
-  border-radius: 0 4px 4px 0;
-  /* Закруглені краї справа */
+  border-radius: 8px;
   background-color: #4e75ff;
   color: white;
   cursor: pointer;
