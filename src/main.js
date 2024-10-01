@@ -38,9 +38,14 @@ form.addEventListener('submit', async (event) => {
     });
   } finally {
     hideLoader();
-
+refreshSearchForm();
   }
 });
+
+
+function refreshSearchForm() {
+  form.reset(); 
+}
 
 function showLoader() {
   loader.classList.remove('hidden');
