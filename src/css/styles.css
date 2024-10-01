@@ -106,7 +106,7 @@ header {
 #search-form input {
   width: 272px;
   height: 40px;
-  padding: 8px;
+  /*padding: 8px;*/
   border-radius: 8px;
   border: 1px solid #ccc;
   outline: none;
