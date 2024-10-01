@@ -3,6 +3,7 @@
   flex-wrap: wrap;
   gap: 16px;
   justify-content: center;
+  position: relative;
 }
 
 .gallery-item {
@@ -24,17 +25,19 @@
   color: #555;
 }
 
-
-.loader.hidden {
-  display: none;
-}
-
 .loader {
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  position: relative;
-  animation: rotate 1s linear infinite
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: rotate 1s linear infinite;
+}
+
+.loader.hidden {
+  display: none;
 }
 
 .loader::before,
