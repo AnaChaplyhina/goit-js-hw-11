@@ -13,8 +13,6 @@
   text-align: center;
   border: 1px solid #808080;
     /* Додаємо сірий обвід до кожної картинки */
-    padding: 8px;
-    /* Відступ всередині елементу */
     box-sizing: border-box;
   }
 
