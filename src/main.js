@@ -37,21 +37,22 @@ form.addEventListener('submit', async (event) => {
       message: 'Failed to fetch images. Please try again later.',
     });
   } finally {
-    hideLoader();
-refreshSearchForm();
+    hideLoader(); 
+    refreshSearchForm(); 
   }
 });
-
 
 function refreshSearchForm() {
   form.reset(); 
 }
 
 function showLoader() {
+  console.log("Showing loader"); 
   loader.classList.remove('hidden');
 }
 
 function hideLoader() {
+  console.log("Hiding loader"); 
   loader.classList.add('hidden');
 }
 
