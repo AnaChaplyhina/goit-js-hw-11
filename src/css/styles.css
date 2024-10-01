@@ -4,6 +4,7 @@
   gap: 16px;
   justify-content: center;
   position: relative;
+  margin-top: 32px;
 }
 
 .gallery-item {
@@ -17,12 +18,17 @@
   height: auto;
   border-radius: 8px;
   object-fit: cover;
+  height: 200px;
 }
 
 .info {
+  display: flex;
   margin-top: 8px;
   font-size: 14px;
   color: #555;
+  margin-top: 8px;
+  justify-content: space-between;
+
 }
 
 .loader {
@@ -88,11 +94,13 @@ header {
   /* Центрування форми */
   margin-top: 20px;
   /* Відступ зверху */
+  margin-top: 32px;
 }
 
 #search-form {
   display: flex;
   align-items: center;
+    gap: 8px;
 }
 
 #search-form input {
