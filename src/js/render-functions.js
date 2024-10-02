@@ -1,44 +1,29 @@
+export function renderGallery(images) {
+  const galleryContainer = document.querySelector('.gallery');
 
-export function renderMarkup(arr, galleryEl) {
-  const markup = arr
-    .map(
-      ({
-        webformatURL,
-        largeImageURL,
-        tags,
-        likes,
-        views,
-        comments,
-        downloads,
-      }) => {
-        return `
-            <li class="gallery-list-item">
-                <a class="gallery_link" href="${largeImageURL}">
-                    <img class="gallery_img" src="${webformatURL}" 
-                        alt="${tags}" 
-                        title="${tags}" />
-                    <ul class="statistics-list">
-                        <li class="statistics-item">
-                            <p class="statistics-item_name">Likes</p>
-                            <p class="statistics_result">${likes}</p>
-                        </li>
-                        <li class="statistics-item">
-                            <p class="statistics-item_name">Views</p>
-                            <p class="statistics_result">${views}</p>
-                        </li>
-                        <li class="statistics-item">
-                            <p class="statistics-item_name">Comments</p>
-                            <p class="statistics_result">${comments}</p>
-                        </li>
-                        <li class="statistics-item">
-                            <p class="statistics-item_name">Downloads</p>
-                            <p class="statistics_result">${downloads}</p>
-                        </li>
-                    </ul>
-                </a>
-            </li>`;
-      }
-    )
+  const markup = images.map(
+      (image) => `
+      <a href="${image.largeImageURL}" class="gallery-item">
+        <img src="${image.webformatURL}" alt="${image.tags}" loading="lazy" />
+        <div class="info">
+          <p><strong>Likes:</strong> ${image.likes}</p>
+          <p><strong>Views:</strong> ${image.views}</p>
+          <p><strong>Comments:</strong> ${image.comments}</p>
+          <p><strong>Downloads:</strong> ${image.downloads}</p>
+        </div>
+      </a>`
+     )
     .join('');
-  galleryEl.insertAdjacentHTML('afterbegin', markup);
+
+
+  galleryContainer.innerHTML = markup;
+
+
+  const lightbox = new SimpleLightbox('.gallery a');
+  lightbox.refresh();
 }
+
+export function clearGallery() {
+  const galleryContainer = document.querySelector('.gallery');
+  galleryContainer.innerHTML = '';
+  }
