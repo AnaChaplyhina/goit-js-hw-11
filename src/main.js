@@ -21,7 +21,7 @@ form.addEventListener('submit', async (event) => {
   }
 
   clearGallery();
-  showLoader();
+   loader.style.display = 'block';
 
   try {
     const data = await fetchImages(searchQuery);
@@ -39,7 +39,7 @@ form.addEventListener('submit', async (event) => {
       message: 'Failed to fetch images. Please try again later.',
     });
   } finally {
-    hideLoader(); 
+    loader.style.display = 'none'; 
     refreshSearchForm(); 
   }
 });
