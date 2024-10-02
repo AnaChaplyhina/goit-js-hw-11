@@ -48,13 +48,4 @@ function refreshSearchForm() {
   form.reset(); 
 }
 
-function showLoader() {
-  console.log("Showing loader"); 
-  loader.classList.remove('hidden');
-}
-
-function hideLoader() {
-  console.log("Hiding loader"); 
-  loader.classList.add('hidden');
-}
 
