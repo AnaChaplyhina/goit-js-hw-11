@@ -36,10 +36,6 @@
 
 /*loader*/
 
-.loader.hidden {
-  display: none;
-}
-
 .loader {
   display: block;
   position: relative;
